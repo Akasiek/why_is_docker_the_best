@@ -1,0 +1,27 @@
+app = "why-docker-is-the-best"
+primary_region = "fra"
+
+[build]
+dockerfile = "docker/Dockerfile"
+
+[env]
+HOST = "0.0.0.0:8080"
+RUST_LOG = "why_is_docker_the_best=info,tower_http=info,axum::rejection=trace"
+
+[http_service]
+internal_port = 8080
+force_https = true
+auto_stop_machines = "stop"
+auto_start_machines = true
+min_machines_running = 1
+processes = ["app"]
+
+[http_service.concurrency]
+type = "requests"
+soft_limit = 200
+hard_limit = 250
+
+[[vm]]
+memory = "256mb"
+cpu_kind = "shared"
+cpus = 1
