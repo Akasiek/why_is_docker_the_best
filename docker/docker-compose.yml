@@ -1,8 +1,6 @@
 services:
   why_is_docker_the_best:
-    build:
-      context: ..
-      dockerfile: docker/Dockerfile
+    image: ghcr.io/akasiek/why_is_docker_the_best:latest
     restart: unless-stopped
     ports:
       - "8080:8080"
