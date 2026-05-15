@@ -1,0 +1,3 @@
+{$DOMAIN:localhost} {
+    reverse_proxy why_is_docker_the_best:8080
+}
