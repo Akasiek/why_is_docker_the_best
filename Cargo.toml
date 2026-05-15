@@ -1,6 +1,6 @@
 [package]
 name = "why_is_docker_the_best"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 
 [dependencies]
