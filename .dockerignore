@@ -1,0 +1,6 @@
+target/
+templates/node_modules/
+.env
+.git/
+.idea/
+
